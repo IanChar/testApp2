@@ -5,5 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <color name="white">#FFFFFF</color>
+    <string name="infoText">Welcome to a generic CU-login page. This page really does nothing it was only practice for making a UI for an Android app; thus, if you click the
+buttons nothing will really happen. Furthermore, in an actual app, there would be useful information here instead of this text.</string>
 
 </resources>
