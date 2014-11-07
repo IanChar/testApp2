@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,73 +10,106 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.testapp2.MainActivity" >
 
+    <FrameLayout
+        android:id="@+id/frameLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:layout_marginTop="125dp"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#DDDDDD"
+                android:text="Password"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/passwordField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:editable="true"
+                android:ems="10"
+                android:focusable="true"
+                android:inputType="textPersonName"
+                android:password="true"
+                android:text="Password"
+                android:textColor="#000000" >
+            </EditText>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity=""
+        android:layout_marginTop="25dp"
+        android:background="@color/white" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/userNameText"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#DDDDDD"
+                android:text="Username"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#000000" />
+
+            <EditText
+                android:id="@+id/usernameField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:editable="true"
+                android:ems="10"
+                android:focusable="true"
+                android:inputType="textPersonName"
+                android:text="John Smith"
+                android:textColor="#000000" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout1"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="24dp"
+        android:layout_toRightOf="@+id/button2"
+        android:text="Submit" />
+
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
-        android:layout_marginRight="52dp"
-        android:layout_toLeftOf="@+id/button1"
+        android:layout_alignLeft="@+id/frameLayout1"
+        android:layout_marginLeft="38dp"
         android:text="Sign Up" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="119dp"
-        android:layout_marginRight="30dp"
-        android:text="Submit" />
-
-    <EditText
-        android:id="@+id/passwordField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="textPersonName" 
-        android:password="true"
-        android:editable="true"
-        android:text="Password"
-        android:focusable="true">    
-    </EditText>
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/passwordField"
-        android:layout_alignLeft="@+id/passwordField"
-        android:text="Password"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="64dp"
-        android:text="Username"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/usernameField"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="19dp"
-        android:editable="true"
-        android:ems="10"
-        android:focusable="true"
-        android:inputType="textPersonName"
-        android:text="myUserName">
-        
-        <requestFocus />
-    </EditText>
 
 </RelativeLayout>
